@@ -1,0 +1,19 @@
+set orthoscopic=1
+set valence, 0
+set ray_trace_mode=1
+cmd.mouse('one_button_viewing')
+run ~/code/pymol_extensions/pymol_additions.py
+run ~/code/pymol_exensions/cgo_circle_radius.py
+run ~/code/supercell_2012.py
+run ~/code/pymol_extensions/axes.py
+run ~/code/pymol_extensions/bfacramp.py
+run ~/code/coloraf.py
+set cartoon_ring_mode, 2
+viewport 1600,1200
+show cartoon
+show spheres, name CL
+hide lines, elem H
+show sticks, het
+show spheres, elem Zn or elem Mg or elem Fe or elem Cu
+show spheres, name NA
+set cartoon_gap_cutoff, 0
